@@ -2,8 +2,7 @@
 
 class DynamicArray {
     private int[] arr;
-    private int size; // Keep track of how many elements are actually added
-
+    private int size; 
     public DynamicArray(int capacity) {
         arr = new int[capacity];
         size = 0;
@@ -18,9 +17,9 @@ class DynamicArray {
     }
 
     public int popback() {
-        if (size == 0) return -1; // Or throw exception
+        if (size == 0) return -1; 
         int p = arr[size - 1];
-        arr[size - 1] = 0; // Optional: Reset to default
+        arr[size - 1] = 0;
         size--;
         return p;
     }
@@ -30,19 +29,19 @@ class DynamicArray {
     }
 
     public int getSize() {
-        return size; // Much faster than looping every time
+        return size; 
     }
 
     public int getCapacity() {
         return arr.length;
     }
     public int get(int i) {
-    // Ideally, check if i < size to prevent accessing uninitialized indices
+   
     return arr[i];
 }
 
 public void set(int i, int n) {
-    // Ideally, check if i < size before setting
+    
     arr[i] = n;
 }
 
